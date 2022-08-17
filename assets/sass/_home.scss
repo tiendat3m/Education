@@ -1,0 +1,123 @@
+
+.home {
+    padding: 0;
+    
+    .slide {
+        display: flex;
+        align-items: center;
+        height: 60rem;
+        background-size: cover !important;
+        background-position: center !important;
+
+        .content {
+            width: 50rem;
+            
+            h3 {
+                @include titleText(5rem);
+                color: $white;
+            }
+
+            p {
+                @include graphText(1.6rem);
+                padding: 1rem 0;
+                color: $light-white;
+            }
+        }
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background: $green;
+}
+
+//SUBJECT SECTION
+.subjects {
+
+    .box-container {
+        @include grid(16rem);
+
+        .box {
+            border: $border;
+            text-align: center;
+            padding: 3rem 2rem;
+            background: $light-green;
+
+            img {
+                width: 10rem;
+                height: 10rem;
+                margin-bottom: .7rem;
+            }
+
+            h3 {
+                @include titleText(1.7rem);
+                padding: .5rem 0;
+            }
+
+            p {
+                @include graphText(1.5rem);
+            }
+
+            &:hover {
+                background: $green;
+                cursor: pointer;
+
+                h3 {
+                    color: $white;
+                }
+
+                p {
+                    color: $light-white;
+                }
+            }
+        }
+    }
+}
+
+
+.home-courses {
+    .slide {
+        text-align: center;
+        position: relative;
+        background-color: $light-green;
+        overflow: hidden;
+
+        &:hover .content {
+            bottom: 0;
+        }
+
+        .image {
+            padding: 2rem;
+
+            img {
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+
+            h3 {
+                @include titleText(2rem)
+            }
+        }
+
+        .content {
+            position: absolute;
+            bottom: -100%; right: 0; left: 0;
+            background: $green;
+            padding: 3rem 2rem;
+
+            h3 {
+                @include titleText(2rem);
+                color: $white;
+            }
+
+            p{
+                padding:1rem 0;
+                @include graphText(1.5rem);
+                color:$light-white;
+             }
+
+             .btn:hover {
+                background-color: $black;
+             }
+        }
+    }
+}

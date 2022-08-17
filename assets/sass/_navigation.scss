@@ -1,0 +1,159 @@
+
+
+.header {
+    display: flex;
+    align-items: center;
+    padding:2rem 10%;
+    position: sticky;
+    top:0; left:0; right:0;
+    background: $white;
+    box-shadow: $box-shadow;
+    z-index: 1000;
+    .logo {
+        @include titleText(2.5rem);
+        font-weight: bolder;
+        margin-right: auto;
+    }
+
+    i {
+        color: $green;
+    }
+
+    .navbar {
+        position: relative;
+
+        #close-navbar {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            font-size: 4rem;
+            cursor: pointer;
+            color: $black;
+            display: none;
+
+            &:hover {
+                transform: rotate(90deg);
+            }
+        }
+        
+        a {
+            color: $black;
+            margin-right: 2rem;
+            @include titleText(2rem);
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+
+    .icons div{
+        font-size: 2.5rem;
+        color: $black;
+        cursor: pointer;
+        margin-left: 1.5rem;
+
+        &:hover {
+            color: $green;
+        }
+    }
+
+    #menu-btn {
+        display: none;
+    }
+}
+
+
+.account-form {
+    position: fixed;
+    top: 0;
+    right: -105%;
+    width: 35rem;
+    padding: 2rem;
+    background-color: $white;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    justify-content: center;
+    z-index: 1200;
+    text-align: center;
+
+    &.active {
+        right: 0;
+        box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
+    }
+
+    #close-form {
+        position: absolute;
+        top: 1.5rem;
+        right: 2.5rem;
+        font-size: 4rem;
+        color: $black;
+        cursor: pointer;
+        &:hover {
+            transform: rotate(90deg);
+        }
+    }
+
+    form {
+        padding: 2rem;
+        border: $border;
+        display: none;
+        
+        &.active {
+            display: block
+        }
+
+        h3 {
+            @include titleText(3rem);
+            text-transform: uppercase;
+            padding-bottom: .5rem;
+        }
+
+        .box {
+            width: 100%;
+            border: $border;
+            font-size: 1.6rem;
+            padding: 1.2rem 1.4rem;
+            margin: .7rem 0;
+            text-transform: none;
+        }
+        
+        .flex {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            gap: .5rem;
+
+            label {
+                font-size: 1.5rem;
+                color: $light-color;
+                cursor: pointer;
+            }
+
+            a {
+                margin-left: auto;
+                font-size: 1.5rem;
+                color: $light-color;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $green;
+                }
+            }
+        }
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    .buttons .btn {
+        margin: 0 .5rem;
+
+        &.active {
+            background-color: $green;
+            color: $white;
+        }
+    }
+}
